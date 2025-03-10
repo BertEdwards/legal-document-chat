@@ -1,0 +1,19 @@
+.footer {
+  background-color: var(--background-tertiary);
+  color: var(--foreground-tertiary);
+  padding-inline: 30px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.mailing_list_wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.email_input {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+}
