@@ -2,6 +2,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 1000px;
+  margin: auto;
+  padding-inline: 20px;
 }
 
 .page_title_wrapper {
@@ -40,7 +43,7 @@
 
 .bullet_check_wrapper {
   font-size: 20px;
-  margin-right: 10px;
+  margin-right: 7px;
 }
 
 .bullet_check {
@@ -49,11 +52,15 @@
 
 .section {
   display: grid;
-  grid-auto-flow: column;
   grid-template-columns: 1fr 1fr;
-  max-width: 1000px;
-  margin-left: 20px;
   margin-block: 80px;
+  gap: 20px;
+}
+
+@media (width < 550px) {
+  .section {
+    grid-template-columns: 1fr;
+  }
 }
 
 .section_reverse {
@@ -83,12 +90,24 @@
 }
 
 .primary_card_wrapper {
-  display: flex;
-  row-gap: 25px;
-  flex-direction: column;
-  max-width: 700px;
-  margin-inline: 50px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
   margin-bottom: 50px;
+}
+
+@media (width >= 795px) {
+  .primary_card_wrapper {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .primary_card_big {
+    grid-column: span 3 !important;
+  }
+
+  .primary_card {
+    grid-column: span 2;
+  }
 }
 
 .primary_card {
@@ -100,6 +119,8 @@
   flex-direction: column;
   row-gap: 7px;
 }
+
+
 
 .primary_card_icon {
   color: var(--accent-primary);
@@ -121,25 +142,50 @@
   background-color: color-mix(in srgb, var(--accent-primary) 20%, transparent);
   border: 1px solid var(--accent-primary);
   padding: 50px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  gap: 30px;
   border-radius: 20px;
-  margin-inline: 20px;
   margin-bottom: 40px;
+  width: 100%;
+}
+
+@media (width < 600px) {
+  .accent_card {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+@media (width < 900px) {
+  .accent_card_bullet_wrapper{
+    grid-template-columns: 1fr !important;
+  }
 }
 
 .accent_card_text {
-  margin-right: 40px;
+}
+
+.accent_card_button {
+  margin: auto;
 }
 
 .accent_card_header {
   margin-bottom: 20px;
+  font-size: 45px;
+  font-weight: 500;
 }
 
 .accent_card_bullet {
   display: flex;
   flex-direction: row;
   margin-top: 2px;
+}
+
+.accent_card_bullet_wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, max-content);
+  column-gap: 20px;
+  row-gap: 5px;
 }

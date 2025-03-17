@@ -10,6 +10,7 @@
   transition: all 0.3s;
   width: fit-content;
   height: fit-content;
+  white-space: nowrap;
 }
 
 .button:hover {

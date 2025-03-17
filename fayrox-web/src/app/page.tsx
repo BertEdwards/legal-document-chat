@@ -6,13 +6,6 @@ import Image from "next/image";
 import { CheckCircle } from "react-bootstrap-icons";
 
 import styles from "./page.module.css"
-import { ReactElement } from "react";
-
-function BoldText(text: string) {
-  return (
-    <span className={styles.card_bold}>{text}</span>
-  );
-}
 
 export default function Home() {
   return (
@@ -50,6 +43,7 @@ export default function Home() {
               src={section.image.path}
               alt={section.image.alt}
               className={styles.section_image}
+              priority={true}
               style={{
                 marginLeft: isOnLeft ? 'auto' : '',
                 marginRight: isOnLeft ? '' : 'auto',
@@ -61,8 +55,8 @@ export default function Home() {
         )
       })}
       <div className={styles.primary_card_wrapper}>
-        {props.pageCardPrimaryElements.map(card => (
-          <div className={styles.primary_card} key={card.header}>
+        {props.pageCardPrimaryElements.map((card, ind) => (
+          <div className={`${styles.primary_card} ${ind == 1 || ind == 2 ? '' : styles.primary_card_big}`} key={card.header}>
             <div className={styles.primary_card_icon}>{card.icon}</div>
             <div className={styles.primary_card_header}>{card.header}</div>
             <div className={styles.primary_card_body}>{card.content.map((elem, boldIndex) => {
@@ -79,26 +73,30 @@ export default function Home() {
           <h2 className={styles.accent_card_header}>
             Get answers to all your legal questions
           </h2>
-          <div className={styles.accent_card_bullet}>
-            <div className={styles.bullet_check_wrapper}>
-              <CheckCircle className={styles.bullet_check} />
+          <div className={styles.accent_card_bullet_wrapper}>
+            <div className={styles.accent_card_bullet}>
+              <div className={styles.bullet_check_wrapper}>
+                <CheckCircle className={styles.bullet_check} />
+              </div>
+              <p>14-day free trial</p>
             </div>
-            <p>14-day free trial</p>
-          </div>
-          <div className={styles.accent_card_bullet}>
-            <div className={styles.bullet_check_wrapper}>
-              <CheckCircle className={styles.bullet_check} />
+            <div className={styles.accent_card_bullet}>
+              <div className={styles.bullet_check_wrapper}>
+                <CheckCircle className={styles.bullet_check} />
+              </div>
+              <p>Accurate and up to date</p>
             </div>
-            <p>Accurate and up to date</p>
-          </div>
-          <div className={styles.accent_card_bullet}>
-            <div className={styles.bullet_check_wrapper}>
-              <CheckCircle className={styles.bullet_check} />
+            <div className={styles.accent_card_bullet}>
+              <div className={styles.bullet_check_wrapper}>
+                <CheckCircle className={styles.bullet_check} />
+              </div>
+              <p>Seamless integration</p>
             </div>
-            <p>Seamless integration</p>
           </div>
         </div>
-        {props.getStartedButton}
+        <div className={styles.accent_card_button}>
+          {props.getStartedButton}
+        </div>
       </div>
     </main>
   );
