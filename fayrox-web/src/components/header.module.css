@@ -71,3 +71,30 @@
 .navbar_element:hover {
   background-color: #f3f3f3;
 }
+
+.navbar_long_wrapper {
+  display: none;
+  flex-direction: row;
+  gap: 10px;
+}
+
+@media (width > 900px) {
+  .navbar_long_wrapper {
+    display: flex;
+  }
+
+  .header_menu {
+    display: none;
+  }
+}
+
+.navbar_long {
+  padding-block: 10px;
+  padding-inline: 20px;
+  border-radius: 10px;
+  transition: background-color 0.5s;
+}
+
+.navbar_long:hover {
+  background-color: #f3f3f3;
+}
