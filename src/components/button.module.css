@@ -1,0 +1,19 @@
+.button {
+  background-color: var(--accent-primary);
+  border: 1px solid var(--accent-primary);
+  cursor: pointer;
+  color: var(--background-primary);
+  font-size: 14px;
+  border-radius: 20px;
+  padding-inline: 20px;
+  padding-block: 10px;
+  transition: all 0.3s;
+  width: fit-content;
+  height: fit-content;
+  white-space: nowrap;
+}
+
+.button:hover {
+  background-color: #ffffff00;
+  color: var(--foreground-primary);
+}

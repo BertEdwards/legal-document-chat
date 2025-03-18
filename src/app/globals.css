@@ -1,0 +1,54 @@
+:root {
+  --background-primary: #ffffff;
+  --background-secondary: #fafafa;
+  --background-tertiary: #202936;
+
+  --foreground-primary: #222;
+  --foreground-tertiary: #eee;
+
+  --accent-primary: #ff8400;
+  
+  --text-font-body: Montserrat, sans-serif;
+  --text-font-header: Montserrat, sans-serif;
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background-primary: #333;
+    --foreground-primary: #eee;
+  }
+} */
+
+html,
+body {
+  max-width: 100vw;
+}
+
+body {
+  color: var(--foreground-primary);
+  background: var(--background-primary);
+  font-family: var(--text-font-body);
+  font-size: 15px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* overflow-y: scroll; */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--text-font-header);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.border_top {
+  border-top: 1px solid #e0e0e0;
+}
