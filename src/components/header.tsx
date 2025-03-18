@@ -4,9 +4,6 @@ import { useEffect, useState } from "react";
 import styles from "./header.module.css"
 import { List } from "react-bootstrap-icons"
 
-interface HeaderProps {
-}
-
 interface PageData {
   name: string,
   link: string
@@ -23,7 +20,7 @@ const pages: PageData[] = [
   }
 ]
 
-export default function Header({ }: HeaderProps) {
+export default function Header() {
   const [burgerExpanded, setBurgerExpanded] = useState<boolean>(false);
 
   // This makes the dropdown close when the page is scrolled
@@ -57,7 +54,7 @@ export default function Header({ }: HeaderProps) {
       <div className={styles.navbar_wrapper}>
         <div className={`${styles.navbar} ${burgerExpanded ? styles.navbar_expanded : ''}`}>
           {pages.flatMap((page, index) => [
-            <div className={index !== 0 ? "border_top" : ""} style={{width: "75%", margin: "auto"}}></div>,
+            <div key={index} className={index !== 0 ? "border_top" : ""} style={{width: "75%", margin: "auto"}}></div>,
             <a key={page.name} href={page.link} className={styles.navbar_element}>{page.name}</a>
           ])}
         </div>
