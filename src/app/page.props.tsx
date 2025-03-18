@@ -88,21 +88,21 @@ export interface PageCardPrimary {
 
 export const pageCardPrimaryElements: PageCardPrimary[] = [
   {
-    icon: <PlusSquare />,
+    icon: <PlusSquare style={{fontSize: "21px"}}/>,
     header: "Do more for less",
     content: [
       "LegalGPT enables your business to ", "reduce legal costs", " by arming you with the tools and knowledge need to conduct legal work independently. All while offering you the opportunity to check with experts where necessary."
     ]
   },
   {
-    icon: <FileEarmarkText />,
+    icon: <FileEarmarkText style={{fontSize: "24px"}}/>,
     header: "Draft legal documents",
     content: [
       "With LegalGPT, draft legal documents tailored to your specific business needs. From NDAs to supplier contracts, LegalGPT enables you to ", "get to a first draft, quicker."
     ]
   },
   {
-    icon: <Pen />,
+    icon: <Pen style={{fontSize: "24px"}}/>,
     header: "Easily review & edit",
     content: [
       "Got a critical contract that you need to review? LegalGPT can tell you wether the contract matches standard terms and ", "spot potential red flags."," Ask questions about the document as a whole or focus on specific clauses."

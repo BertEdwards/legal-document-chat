@@ -8,27 +8,26 @@
   margin: auto;
   position: sticky;
   top: 0;
-  background: rgb(255,255,255);
-  background: -moz-linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 95%, rgba(255,255,255,0) 100%);
-  background: -webkit-linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 95%, rgba(255,255,255,0) 100%);
-  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 95%, rgba(255,255,255,0) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#ffffff",GradientType=1);
+  background: var(--background-primary);
+  background: -moz-linear-gradient(180deg, var(--background-primary) 0%, var(--background-primary) 95%, transparent 100%);
+  background: -webkit-linear-gradient(180deg, var(--background-primary) 0%, var(--background-primary) 95%, transparent 100%);
+  background: linear-gradient(180deg, var(--background-primary) 0%, var(--background-primary) 95%, transparent 100%);
+  z-index: 2;
 }
 
 .header_title {
   font-size: 40px;
   font-weight: 600;
   background: rgb(2,0,36);
-  background: -moz-linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,0,0,1) 0%, rgba(223,223,223,1) 100%);
-  background: -webkit-linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,0,0,1) 0%, rgba(223,223,223,1) 100%);
-  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,0,0,1) 0%, rgba(223,223,223,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024",endColorstr="#dfdfdf",GradientType=1);
+  background: -moz-linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(223,223,223,1) 100%);
+  background: -webkit-linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(223,223,223,1) 100%);
+  background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(223,223,223,1) 100%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .header_menu {
-  color: black;
+  color: var(--foreground-primary);
   font-size: 20px;
   margin-right: 20px;
   cursor: pointer;
@@ -69,7 +68,7 @@
 }
 
 .navbar_element:hover {
-  background-color: #f3f3f3;
+  background-color: var(--accent-secondary);
 }
 
 .navbar_long_wrapper {
@@ -78,7 +77,7 @@
   gap: 10px;
 }
 
-@media (width > 900px) {
+@media (width >= 900px) {
   .navbar_long_wrapper {
     display: flex;
   }
@@ -96,5 +95,5 @@
 }
 
 .navbar_long:hover {
-  background-color: #f3f3f3;
+  background-color: var(--accent-secondary);
 }

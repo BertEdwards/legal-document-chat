@@ -7,6 +7,7 @@
   --foreground-tertiary: #eee;
 
   --accent-primary: #ff8400;
+  --accent-secondary: #e7e7e7;
   
   --text-font-body: Montserrat, sans-serif;
   --text-font-header: Montserrat, sans-serif;
@@ -31,7 +32,6 @@ body {
   font-size: 15px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* overflow-y: scroll; */
 }
 
 h1, h2, h3, h4, h5, h6 {

@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import styles from "./header.module.css"
 import { List } from "react-bootstrap-icons"
+import { useWindowSize } from "@/state";
 
 interface PageData {
   name: string,
@@ -38,6 +39,14 @@ export default function Header() {
     };
   }, [])
 
+  const windowWidth = useWindowSize().width
+
+  useEffect(() => {
+    if (windowWidth >= 900) {
+      setBurgerExpanded(false);
+    }
+  }, [windowWidth])
+
   return (
     <header className={styles.header_wrapper} onScroll={e => e.preventDefault()}>
       <div className={styles.title_wrapper}>
@@ -53,10 +62,9 @@ export default function Header() {
       </div>
       <div className={styles.navbar_wrapper}>
         <div className={`${styles.navbar} ${burgerExpanded ? styles.navbar_expanded : ''}`}>
-          {pages.flatMap((page, index) => [
-            <div key={index} className={index !== 0 ? "border_top" : ""} style={{width: "75%", margin: "auto"}}></div>,
+          {pages.map((page, index) => (
             <a key={page.name} href={page.link} className={styles.navbar_element}>{page.name}</a>
-          ])}
+          ))}
         </div>
       </div>
     </header>
