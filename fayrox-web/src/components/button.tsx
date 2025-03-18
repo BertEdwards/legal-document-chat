@@ -5,8 +5,8 @@ import styles from "./button.module.css"
 
 export interface ButtonProps {
   text: string
-  custom_styles?: { [key: string]: any }
-  mouseover_styles?: { [key: string]: any }
+  custom_styles?: { [key: string]: string }
+  mouseover_styles?: { [key: string]: string }
 }
 
 export default function Button({ text, custom_styles, mouseover_styles } : ButtonProps) {

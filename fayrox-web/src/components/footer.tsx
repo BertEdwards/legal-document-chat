@@ -25,6 +25,7 @@ export default function Footer() {
       <h1>
         Fayrox
       </h1>
+      <br />
       <p>© 2025 Nixon Industries Ltd (NO. XXXXX) | Privacy Policy | Terms and Conditions</p>
       </div>
     </footer>

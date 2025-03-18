@@ -1,4 +1,3 @@
-import Button, { ButtonProps } from "@/componenets/button";
 import * as props from "./page.props"
 
 import Image from "next/image";

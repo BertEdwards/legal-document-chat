@@ -1,4 +1,4 @@
-import Button, { ButtonProps } from "@/componenets/button"
+import Button, { ButtonProps } from "@/components/button"
 import { ReactElement } from "react"
 
 import { FileEarmarkText, Pen, People, PlusSquare } from "react-bootstrap-icons"
@@ -85,8 +85,6 @@ export interface PageCardPrimary {
   header: string
   content: string[]
 }
-
-// FileEarmarkText, Pen, People, PlusSquare
 
 export const pageCardPrimaryElements: PageCardPrimary[] = [
   {
