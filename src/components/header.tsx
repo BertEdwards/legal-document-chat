@@ -62,7 +62,7 @@ export default function Header() {
       </div>
       <div className={styles.navbar_wrapper}>
         <div className={`${styles.navbar} ${burgerExpanded ? styles.navbar_expanded : ''}`}>
-          {pages.map((page, index) => (
+          {pages.map((page) => (
             <a key={page.name} href={page.link} className={styles.navbar_element}>{page.name}</a>
           ))}
         </div>
