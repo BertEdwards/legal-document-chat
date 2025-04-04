@@ -1,0 +1,1 @@
+export const meetingLink: string = "https://app.apollo.io/#/meet/bert_edwards_410/15-min"

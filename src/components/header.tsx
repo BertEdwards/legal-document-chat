@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 import styles from "./header.module.css"
 import { List } from "react-bootstrap-icons"
 import { useWindowSize } from "@/state";
+import Link from "next/link";
+import { meetingLink } from "@/globals";
 
 interface PageData {
   name: string,
@@ -13,11 +15,11 @@ interface PageData {
 const pages: PageData[] = [
   {
     name: "Get Started",
-    link: "/"
+    link: meetingLink
   },
   {
     name: "Contact",
-    link: "/"
+    link: "mailto:contact@fayrox.com"
   }
 ]
 
@@ -50,9 +52,11 @@ export default function Header() {
   return (
     <header className={styles.header_wrapper} onScroll={e => e.preventDefault()}>
       <div className={styles.title_wrapper}>
-        <h1 className={styles.header_title}>
-          Fayrox
-        </h1>
+        <Link href="/">
+          <h1 className={styles.header_title}>
+            Fayrox
+          </h1>
+        </Link>
         <List className={styles.header_menu} onClick={() => setBurgerExpanded(prev => !prev)} />
         <div className={styles.navbar_long_wrapper}>
           {pages.map((page) => (

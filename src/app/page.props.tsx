@@ -4,11 +4,17 @@ import { ReactElement } from "react"
 import { FileEarmarkText, Pen, People, PlusSquare } from "react-bootstrap-icons"
 
 const getStartedButtonProps: ButtonProps = {
-  text: "Get started"
+  text: "Get started",
+  link: {
+    href: "https://app.apollo.io/#/meet/bert_edwards_410/15-min"
+  }
 }
 
 const bookACallButtonProps: ButtonProps = {
-  text: "Book a call"
+  text: "Book a call",
+  link: {
+    href: "https://app.apollo.io/#/meet/bert_edwards_410/15-min"
+  }
 }
 
 export const getStartedButton = <Button {...getStartedButtonProps} />

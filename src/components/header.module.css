@@ -4,7 +4,7 @@
   align-items: center;
   padding-inline: 10px;
   padding-block: 20px;
-  max-width: 1000px;
+  width: 100%;
   margin: auto;
   position: sticky;
   top: 0;
@@ -23,6 +23,7 @@
   background: -webkit-linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(223,223,223,1) 100%);
   background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(223,223,223,1) 100%);
   background-clip: text;
+  cursor: pointer;
   -webkit-text-fill-color: transparent;
 }
 

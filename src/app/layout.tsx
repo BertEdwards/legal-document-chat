@@ -10,6 +10,8 @@ export const metadata: Metadata = {
   description: "The official website for Fayrox Legal.",
 };
 
+import { PostHogProvider } from './providers'
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -18,10 +20,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Header />
-        {children}
+      <PostHogProvider>
+        <div style={{maxWidth: "1000px", display: "flex", flexDirection: "column", margin: "auto"}}>
+          <Header />
+          {children}
+        </div>
         <Footer />
+        </PostHogProvider>
       </body>
     </html>
   );
 }
+
