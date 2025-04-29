@@ -1,18 +1,27 @@
+"use client";
+
 import Link from "next/link"
-import Button from "./button"
 import styles from "./footer.module.css"
+import buttonStyle from "@/components/button.module.css"
 
 export default function Footer() {
   const handleFormSubmit: (f: FormData) => void = (formData) => {
     console.log("name " + formData.get("name"))
     console.log("email " + formData.get("email"))
+
+    // Send the email
+    const url = new URL("mailto:mail@example.org")
+    url.searchParams.append("subject", formData.get("name") + " would like to subscribe")
+    url.searchParams.append("body", formData.get("email") + "")
+    console.log(url.toString())
+    window.location.href = url.toString()
   }
 
   const mailForm = (
     <form className={styles.mailing_form} action={handleFormSubmit}>
       <input name="name" placeholder="Name" type="text" className={styles.email_input} required={true} />
       <input name="email" placeholder="Email Address" type="email" className={styles.email_input} required={true} />
-      <button type="submit">Submit</button>
+      <button type="submit" className={buttonStyle.button}>Submit</button>
     </form>
   )
 

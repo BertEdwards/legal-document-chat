@@ -3,7 +3,7 @@ export default function Privacy() {
         <div>
             <h2 style={{paddingBlock: "5px"}}>Introduction</h2>
 
-            Welcome to Fayrox's privacy policy. Thank you for using our website, fayrox.com (the Site). Fayrox respects your privacy and is committed to protecting your personal data. This privacy policy informs you as to how we look after your personal data when you visit our Site (regardless of where you visit it from) and tell you about your privacy rights and how the law protects you. By using the Site you accept the practices described in this Privacy Policy.Questions or comments may be addressed to <a style={{color: "blue"}} href="mailto:contact@fayrox.com">contact@fayrox.com</a>.
+            Welcome to Fayrox&apos;s privacy policy. Thank you for using our website, fayrox.com (the Site). Fayrox respects your privacy and is committed to protecting your personal data. This privacy policy informs you as to how we look after your personal data when you visit our Site (regardless of where you visit it from) and tell you about your privacy rights and how the law protects you. By using the Site you accept the practices described in this Privacy Policy.Questions or comments may be addressed to <a style={{color: "blue"}} href="mailto:contact@fayrox.com">contact@fayrox.com</a>.
 
             <h3 style={{paddingBlock: "5px"}}>GDPR notice</h3>
 
@@ -17,7 +17,7 @@ export default function Privacy() {
 
             <h3 style={{paddingBlock: "5px"}}>Controller</h3>
 
-            Fayrox is the controller and responsible for your personal data (collectively referred to as “Fayrox””, “we”, “us” or “our” in this privacy policy). You have the right to make a complaint at any time to the Information Commissioner's Office (ICO), the UK supervisory authority for data protection issues (ico.org.uk). We would, however, appreciate the chance to deal with your concerns before you approach the ICO so please contact us in the first instance.
+            Fayrox is the controller and responsible for your personal data (collectively referred to as “Fayrox””, “we”, “us” or “our” in this privacy policy). You have the right to make a complaint at any time to the Information Commissioner&apos;s Office (ICO), the UK supervisory authority for data protection issues (ico.org.uk). We would, however, appreciate the chance to deal with your concerns before you approach the ICO so please contact us in the first instance.
 
             <h3 style={{paddingBlock: "5px"}}>Changes to the privacy policy and your duty to inform us of changes</h3>
 
@@ -115,9 +115,9 @@ export default function Privacy() {
 
             <h3 style={{paddingBlock: "5px"}}>Third parties</h3>
 
-            Service providers who provide IT and system administration services. Professional advisers including lawyers, bankers, auditors and insurers who provide consultancy, banking, legal, insurance and accounting services. HM Revenue & Customs (HMRC), regulators and other authorities who require reporting of processing activities in certain circumstances. How to complain If you have any concerns about our use of your personal information, you can make a complaint to us. You can also complain to the ICO if you are unhappy with how we have used your data. The ICO's address:
+            Service providers who provide IT and system administration services. Professional advisers including lawyers, bankers, auditors and insurers who provide consultancy, banking, legal, insurance and accounting services. HM Revenue & Customs (HMRC), regulators and other authorities who require reporting of processing activities in certain circumstances. How to complain If you have any concerns about our use of your personal information, you can make a complaint to us. You can also complain to the ICO if you are unhappy with how we have used your data. The ICO&apos;s address:
 
-            Information Commissioner's Office, Wycliffe House, Water Lane, Wilmslow, Cheshire SK9 5AF.
+            Information Commissioner&apos;s Office, Wycliffe House, Water Lane, Wilmslow, Cheshire SK9 5AF.
 
             <br/>
             <br/>

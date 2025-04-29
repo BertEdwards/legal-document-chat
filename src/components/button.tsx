@@ -1,6 +1,6 @@
 "use client";
 
-import React, { ButtonHTMLAttributes, DetailedHTMLProps, useState } from "react";
+import React, { useState } from "react";
 import styles from "./button.module.css"
 
 export interface ButtonPropsLink {
